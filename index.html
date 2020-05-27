@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team form</title>
+    <script src="src/app.js"></script>
+    <script src="src/main.js"></script>
+    
+    <script src="src/player.js"></script>
+</head>
+
+<body>
+    <h1>Formulário para cadastro de jogador</h1>
+    <form id="cadastro" onsubmit="app.loadPlayers()">
+        <label>Name: </label>
+        <input type="text" name="name">
+        <br><br>
+        <label>Age: </label>
+        <input type="text" name="age">
+        <br><br>
+        <label>Team: </label>
+        <input type="text" name="team">
+        <br><br>
+        <label>Titular:</label>
+        <select name="titular" id="titular">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+        </select>
+        <br><br>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="app.cleanForm()">Apagar</button>
+    </form>
+
+    <h2>Players</h2>
+    <form name="players" id="player-list"></form>
+
+</body>
+
+</html>
